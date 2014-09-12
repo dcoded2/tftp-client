@@ -24,7 +24,9 @@ int main(int argc, char** argv)
 		int len   = 0;
 		int bytes = 0;
 
-		len = protocol::pack (buffer, protocol::get ("dcx01", Mode::OCTET));
+		auto rrq = protocol::get ("dcx01", Mode::OCTET);
+		
+		len = protocol::pack (buffer, &rrq);
 		std::cout << "sent " << len << " bytes\n";
 
 		if ((bytes = session.send (buffer, len)) == len) {
@@ -35,9 +37,10 @@ int main(int argc, char** argv)
 
 			//protocol::unpack (buffer);
 			tftp::packet::data dta (buffer);
+			auto ack = protocol::ack (dta.index);
 
 			session.send (buffer,
-				protocol::pack (buffer, protocol::ack (dta.index)));
+				protocol::pack (buffer, &ack));
 		}
 	}
 

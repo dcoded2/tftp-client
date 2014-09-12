@@ -1,0 +1,8 @@
+{
+	"folders":
+	[
+		{"path": "/Users/denis/Development/repos/github.com/dcoded/tftp-client"
+		,"file_exclude_patterns": ["tftp-client"],"folder_exclude_patterns": [".proj", ".bin"]
+		}
+	]
+}

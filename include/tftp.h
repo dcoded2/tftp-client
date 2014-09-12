@@ -9,7 +9,11 @@
 
 #include <tftp/opcode.h>
 #include <tftp/mode.h>
-#include <tftp/packet.h>
+
+#include <tftp/packet/request.h>
+#include <tftp/packet/error.h>
+#include <tftp/packet/data.h>
+#include <tftp/packet/ack.h>
 
 namespace tftp {
 
@@ -22,9 +26,8 @@ class protocol {
 		static packet::error   error (uint16_t error, std::string message);
 
 
-		template <class T>
-		static uint16_t pack (char* buf, T packet) {
-			return packet.pack (buf);
+		static uint16_t pack (char* buf, packet::packet* packet) {
+			return packet->pack (buf);
 		}
 
 		static packet::packet* unpack (char* data) {
