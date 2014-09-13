@@ -20,7 +20,7 @@ class error : public packet {
 		error ();
 		error (char* buf);
 
-		uint16_t pack (char* buf);
+		uint16_t pack (char* buf) const;
 		void     unpack (char* it);
 };
 

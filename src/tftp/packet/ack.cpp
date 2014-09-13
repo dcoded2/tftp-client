@@ -8,7 +8,7 @@ ack::ack (char* buf) : packet (Opcode::OP_ACK) {
 	unpack (buf);
 }
 
-uint16_t ack::pack (char* buf) {
+uint16_t ack::pack (char* buf) const {
 
 	char* it = buf;
 
@@ -21,6 +21,9 @@ uint16_t ack::pack (char* buf) {
 void ack::unpack (char* it) {
 
 	deserializer <uint16_t> (it, (uint16_t*)&this->opcode);
+
+	assert (opcode == Opcode::OP_ACK);
+
 	deserializer <uint16_t> (it, &index);
 }
 

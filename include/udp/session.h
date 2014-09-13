@@ -2,6 +2,7 @@
 #define INCLUDE_UDP_SESSION_H
 
 #include <errno.h>
+#include <assert.h>
 #include <string.h>
 #include <unistd.h>
 #include <netdb.h>
@@ -15,7 +16,7 @@ namespace udp {
 class session {
 
 	public:
-		session (int fd, addrinfo* addr);
+		session (int fd = -1, addrinfo* addr = nullptr);
 		~session ();
 
 		uint16_t send (char* buffer, uint16_t len);
@@ -24,8 +25,8 @@ class session {
 		bool ok ();
 
 	private:
-		int  fd_;
-		addrinfo* res_;
+		int       fd_  = -1;
+		addrinfo* res_ = nullptr;
 };
 
 }

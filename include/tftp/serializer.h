@@ -57,11 +57,8 @@ template <>
 struct deserializer <uint16_t> {
 	
 	deserializer (char*& src, uint16_t* dst) {
-		int size = sizeof (uint16_t);
-
-		memcpy (&dst, &src, size);
-		src += size;
-		*dst = ntohs (*dst);
+		*dst = ntohs (*(uint16_t*)src);
+		src += sizeof (uint16_t);
 	}
 };
 
@@ -69,9 +66,9 @@ template <>
 struct deserializer <std::string> {
 
 	deserializer (char*& src, std::string* dst) {
-		int size = strlen (src) + 1;
-		*dst = *src;
-		src += size; 
+		dst->clear ();
+		dst->append (src);
+		src += dst->size () + 1; 
 	}
 };
 

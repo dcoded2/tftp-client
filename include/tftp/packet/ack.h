@@ -19,7 +19,7 @@ class ack : public packet {
 		ack ();
 		ack (char* buf);
 
-		uint16_t pack (char* buf);
+		uint16_t pack (char* buf) const;
 		void     unpack (char* it);
 };  
 

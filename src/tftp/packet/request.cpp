@@ -8,7 +8,7 @@ request::request (char* buf) : packet (Opcode::OP_NUL) {
 	unpack (buf);
 }
 
-uint16_t request::pack (char* buf) {
+uint16_t request::pack (char* buf) const {
 
 	char* it = buf;
 
@@ -21,7 +21,10 @@ uint16_t request::pack (char* buf) {
 
 void request::unpack (char* it) {
 
-	deserializer <uint16_t>    (it, (uint16_t*)&this->opcode);
+	deserializer <uint16_t> (it, (uint16_t*)&this->opcode);
+
+	assert (opcode == Opcode::OP_WRQ || opcode == Opcode::OP_RRQ);
+
 	deserializer <std::string> (it, &file);
 	deserializer <std::string> (it, &mode);
 }

@@ -8,7 +8,7 @@ error::error (char* buf) : packet (Opcode::OP_ERR) {
 	unpack (buf);
 }
 
-uint16_t error::pack (char* buf) {
+uint16_t error::pack (char* buf) const {
 
 	char* it = buf;
 
@@ -21,7 +21,10 @@ uint16_t error::pack (char* buf) {
 
 void error::unpack (char* it) {
 
-	deserializer <uint16_t>    (it, (uint16_t*)&this->opcode);
+	deserializer <uint16_t> (it, (uint16_t*)&this->opcode);
+
+	assert (opcode == Opcode::OP_ERR);
+
 	deserializer <uint16_t>    (it, &err);
 	deserializer <std::string> (it, &message);
 }

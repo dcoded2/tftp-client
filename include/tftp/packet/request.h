@@ -20,7 +20,7 @@ class request : public packet {
 		request (Opcode op);
 		request (char* buf);
 
-		uint16_t pack (char* buf);
+		uint16_t pack (char* buf) const;
 		void     unpack (char* it);
 };
 
