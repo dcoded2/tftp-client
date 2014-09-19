@@ -1,7 +1,6 @@
 #ifndef INCLUDE_UDP_CLIENT_H
 #define INCLUDE_UDP_CLIENT_H
 
-
 #include <string.h>
 #include <unistd.h>
 #include <netdb.h>
@@ -17,9 +16,8 @@
 namespace udp {
 
 class client {
-
 	public:
-		session connect (const char* host, const char* port);
+		session::pointer connect (const char* host, const char* port);
 };
 
 };

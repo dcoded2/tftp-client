@@ -1,0 +1,662 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"uint",
+				"uint16_t	typedef"
+			],
+			[
+				"rec",
+				"receipts"
+			],
+			[
+				"SRC",
+				"SRC_EXTN"
+			],
+			[
+				"test",
+				"test_size"
+			],
+			[
+				"line",
+				"line"
+			],
+			[
+				"lear",
+				"learn_size"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"int",
+				"int_type_block"
+			],
+			[
+				"int_ty",
+				"int_type_time"
+			],
+			[
+				"tckt",
+				"tckt_cache"
+			],
+			[
+				"dest",
+				"dest_addr"
+			],
+			[
+				"tck",
+				"tckt_cache"
+			],
+			[
+				"rand",
+				"random_traffic"
+			],
+			[
+				"for",
+				"format_exc"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/tftp/packet/data.cpp",
+			"settings":
+			{
+				"buffer_size": 687,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/serializer.h",
+			"settings":
+			{
+				"buffer_size": 1229,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/main.cpp",
+			"settings":
+			{
+				"buffer_size": 3969,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet/ack.h",
+			"settings":
+			{
+				"buffer_size": 381,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet/request.h",
+			"settings":
+			{
+				"buffer_size": 490,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet/error.h",
+			"settings":
+			{
+				"buffer_size": 463,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/udp/session.h",
+			"settings":
+			{
+				"buffer_size": 509,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/udp/session.cpp",
+			"settings":
+			{
+				"buffer_size": 635,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 93.0,
+		"selected_items":
+		[
+			[
+				"C++",
+				"Set Syntax: C++"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"sftp",
+				"SFTP: Show Panel"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/udp/session.cpp",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/.proj/project.sublime-project",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet/packet.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/tftp/packet/request.cpp",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/tftp/packet/error.cpp",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/tftp/packet/ack.cpp",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet/data.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/main.cpp",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet/ack.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet/error.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet/request.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/tftp/packet/packet.cpp",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/udp/client.cpp",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/mode.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/opcode.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/tftp/packet/data.cpp",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/tftp/packet.cpp",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/udp/client.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/tftp.cpp",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/serializer.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/udp/session.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/ui.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/client.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/udp_client.h",
+		"/Users/denis/Development/repos/github.com/dcoded/tftp-client/Makefile",
+		"/Users/denis/Development/csci-crypto/affine/include/affine.h",
+		"/Users/denis/Development/csci-crypto/affine/src/main.cpp",
+		"/Users/denis/repos/isann/src/main.cpp",
+		"/Users/denis/repos/githubs/isann/src/main.cpp",
+		"/Users/denis/repos/githubs/isann/src/Parser.cpp",
+		"/Users/denis/repos/githubs/isann/include/Parser.h",
+		"/Users/denis/development/csci-crypto/freq/.proj/project.sublime-project",
+		"/Users/denis/repos/githubs/isann/include/csv_reader.h",
+		"/Users/denis/repos/githubs/isann/src/InputLayer.cpp",
+		"/Users/denis/repos/githubs/isann/src/Layer.cpp",
+		"/Users/denis/repos/githubs/isann/src/MultiLayerPerceptron.cpp",
+		"/Users/denis/repos/githubs/isann/src/OutputLayer.cpp",
+		"/Users/denis/repos/isann/data/learn.f.sample",
+		"/Users/denis/repos/isann/src/main.cpp.old",
+		"/Users/denis/repos/isann/data/xor.learn.data",
+		"/Users/denis/repos/isann/data/xor.test.data",
+		"/Users/denis/repos/isann/src/main.cpp.old2",
+		"/Users/denis/repos/isann/data/results.txt",
+		"/Users/denis/repos/isann/data/learn.f.data",
+		"/Users/denis/repos/isann/src/main.cpp.old2.cpp",
+		"/Users/denis/repos/isann/data/main.cpp.old2",
+		"/Users/denis/repos/isann/include/Parser.h",
+		"/Users/denis/repos/isann/src/Parser.cpp",
+		"/Users/denis/repos/isann/include/OutputLayer.h",
+		"/Users/denis/repos/isann/src/parse_test.cpp",
+		"/Users/denis/repos/isann/include/MultiLayerPerceptron.h",
+		"/Users/denis/repos/isann/data/test.f.sample",
+		"/Users/denis/repos/isann/data/test.f.data",
+		"/Users/denis/repos/isann/data/learn.data",
+		"/Users/denis/repos/isann/include/Hash.h",
+		"/Users/denis/repos/isann/data/sample.txt",
+		"/Users/denis/repos/isann/include/csv_reader.h",
+		"/Users/denis/repos/isan/include/Neuron.h",
+		"/Users/denis/repos/distress2/cli/ui/info.py",
+		"/Users/denis/repos/distress2/cli/ui/export.py",
+		"/Users/denis/repos/distress2/cli/ui/api/distress_receipt.py",
+		"/Users/denis/repos/distress2/cli/ui/add.py",
+		"/Users/denis/repos/distress2/cli/ui/config.py",
+		"/Users/denis/repos/distress2/cli/ui/api/distress_receipt.pyc",
+		"/Users/denis/repos/distress/cli/ui/_config.py",
+		"/Users/denis/repos/distress/cli/ui/list.py",
+		"/Users/denis/repos/distress/cli/ui/add.py",
+		"/Users/denis/repos/distress/cli/ui/config.py",
+		"/Users/denis/repos/google/include/node.h",
+		"/Users/denis/repos/google/include/goog.",
+		"/Users/denis/repos/tckt/include/tckt.h",
+		"/Users/denis/Downloads/hw2.sql",
+		"/Users/denis/repos/idsfiles/include/directory.hpp",
+		"/Users/denis/Desktop/optimized_attacks_normal/misuse/test.csv",
+		"/Users/denis/Desktop/optimized_attacks_normal/misuse/learn.csv",
+		"/Users/denis/Desktop/DenisCoady_Resume.tex",
+		"/Users/denis/Library/Application Support/Sublime Text 2/Packages/User/sftp_servers/csrit",
+		"/Users/denis/repos/tiv/src/main.cpp.txt",
+		"/Users/denis/Desktop/.DS_Store",
+		"/Users/denis/repos/distress-cli/docopt.py",
+		"/Users/denis/repos/distress-cli/d_get.py",
+		"/Users/denis/repos/distress-cli/d_add.py",
+		"/Users/denis/repos/distress-cli/add/d_get.py",
+		"/Users/denis/repos/distress-cli/add/__init__.py",
+		"/Users/denis/repos/distress-cli/add/docopt.py",
+		"/Users/denis/repos/distress-cli/git_remove.py",
+		"/Users/denis/repos/distress-cli/add.py",
+		"/Users/denis/repos/distress-cli/add/add.py",
+		"/Users/denis/repos/distress-cli/commands/add/__init__.py",
+		"/Users/denis/repos/distress-cli/commands/add.py",
+		"/Users/denis/repos/distress-cli/commands/add/add.py",
+		"/Users/denis/repos/distress-cli/distress.py",
+		"/Users/denis/Documents/docopt.py",
+		"/Users/denis/repos/hello/main.cpp"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tftp::Mode",
+			"Opcode::",
+			"packer",
+			"p",
+			"o",
+			"u",
+			"i",
+			"k",
+			"z",
+			"n",
+			"f",
+			"w",
+			"y",
+			", ",
+			"CLAS",
+			"CLASS",
+			"ofstr",
+			"2.0\\n",
+			"1.0\\n",
+			"Optimized_NMap, ATTACK\\n",
+			"ATTA",
+			"Optimized_WarezClient, ATTACK\\n",
+			"Optimized_Satan, ATTACK\\n",
+			"Optimized_PortSweep, ATTACK\\n",
+			"Optimized_Neptune, ATTACK\\n",
+			"Optimized_NMap, ATTACK\\n",
+			"MultiLayerPerceptron",
+			"Librar",
+			"args",
+			"SRC_EXT",
+			"’",
+			"would",
+			"detail::line",
+			"cpp"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"Mode",
+			"",
+			"serializer",
+			"g",
+			"n",
+			"s",
+			"o",
+			"w",
+			"x",
+			"i",
+			"p",
+			"u",
+			"b",
+			"\\n",
+			"928347.0\\n",
+			"1.0\\n",
+			"5.0\\n",
+			"4.0\\n",
+			"3.0\\n",
+			"2.0\\n",
+			"1.0\\n",
+			"'",
+			"line"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/tftp/packet/data.cpp",
+					"settings":
+					{
+						"buffer_size": 687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								227,
+								227
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 14.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/serializer.h",
+					"settings":
+					{
+						"buffer_size": 1229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								977,
+								977
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 343.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/main.cpp",
+					"settings":
+					{
+						"buffer_size": 3969,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3239,
+								3239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2273.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet/ack.h",
+					"settings":
+					{
+						"buffer_size": 381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								333,
+								333
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet/request.h",
+					"settings":
+					{
+						"buffer_size": 490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								444,
+								444
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/tftp/packet/error.h",
+					"settings":
+					{
+						"buffer_size": 463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								417,
+								417
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/include/udp/session.h",
+					"settings":
+					{
+						"buffer_size": 509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								495,
+								495
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 99.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/denis/Development/repos/github.com/dcoded/tftp-client/src/udp/session.cpp",
+					"settings":
+					{
+						"buffer_size": 635,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 23.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.clang":
+	{
+		"height": 108.0
+	},
+	"output.exec":
+	{
+		"height": 102.0
+	},
+	"output.sftp":
+	{
+		"height": 102.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 241.0,
+	"status_bar_visible": true
+}

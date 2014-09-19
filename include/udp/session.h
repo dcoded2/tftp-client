@@ -8,7 +8,7 @@
 #include <netdb.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
-
+#include <memory>
 #include <string>
 
 namespace udp {
@@ -16,11 +16,15 @@ namespace udp {
 class session {
 
 	public:
+		typedef std::shared_ptr<session> pointer;
+
 		session (int fd = -1, addrinfo* addr = nullptr);
 		~session ();
 
-		uint16_t send (char* buffer, uint16_t len);
-		uint16_t recv (char* buffer, uint16_t len);
+		session& operator= (const session& rhs);
+
+		int send (char* buffer, uint16_t len);
+		int recv  (char* buffer, uint16_t len);
 
 		bool ok ();
 

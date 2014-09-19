@@ -8,7 +8,6 @@ session::session (int fd, addrinfo* addr)
 
 
 session::~session () {
-
 	if (fd_ >= 0)
 		close (fd_);
 
@@ -16,13 +15,24 @@ session::~session () {
 		freeaddrinfo (res_);
 }
 
-uint16_t session::send (char* buffer, uint16_t len) {
+session & session::operator= (const session& rhs)
+{
+    if (this != &rhs)
+    {
+    	fd_  = rhs.fd_;
+    	res_ = rhs.res_;
+    }
+
+    return *this;
+}
+
+int session::send (char* buffer, uint16_t len) {
 
 	assert (fd_ >= 0 && res_ != nullptr);
     return sendto (fd_, buffer, len, 0, res_->ai_addr, res_->ai_addrlen);
 }
 
-uint16_t session::recv (char* buffer, uint16_t len) {
+int session::recv (char* buffer, uint16_t len) {
 
 	assert (fd_ >= 0 && res_ != nullptr);
 	memset (buffer, 0, len);

@@ -1,9 +1,12 @@
 #include <iostream>
 #include <iomanip>
+#include <iterator>
 #include <fstream>
 #include <sstream>
 #include <map>
 #include <vector>
+#include <errno.h>
+#include <string.h>
 
 #include <tftp.h>
 #include <udp/client.h>
@@ -33,7 +36,8 @@ std::map <std::string, State> command = {
 	{"connect", State::CONNECT},
 	{"quit"   , State::QUIT   },
 	{"?"      , State::HELP   },
-	{"get"    , State::GET    }
+	{"get"    , State::GET    },
+	{"mode"   , State::MODE   }
 };
 
 std::map <std::string, Mode> modes = {
@@ -54,7 +58,7 @@ std::map <State, State> next = {
 };
 
 
-void get (udp::session& session, const char* filename, Mode mode);
+int get (udp::session& session, const char* filename, Mode mode);
 
 void interactive_prompt (udp::client& client);
 
@@ -72,8 +76,8 @@ int main(int argc, char** argv)
 
 void interactive_prompt (udp::client& client)
 {
-	udp::session session;
-	Mode   mode = Mode::OCTET;
+	udp::session::pointer s;
+	std::string   mode;
 
 
 	std::string line;
@@ -99,22 +103,26 @@ void interactive_prompt (udp::client& client)
 								//std::transform(args[0].begin(), args[0].end(), args[0].begin(), ::tolower);
 		break;
 
-		case State::CONNECT:	std::cout << "connecting to " << args[1] << ":" << args[2] << "\n";
-								session = client.connect (args[1].c_str (), "69");
+		case State::CONNECT:	s = client.connect (args[1].c_str (), "69");
+								if (s->ok ())
+									std::cout << "connected to " << args[1] << "\n";
+								else
+									std::cout << "error: unable to connect to " << args[1] << "\n";
 		break;
 
 		case State::MODE:		if (modes.find (args[1]) != modes.end ()) {
-									mode = modes[ args[1] ];
+									mode = args[1];
 									std::cout << "Switching to '" << args[1] << "' mode\n";
 								} else {
 									std::cout << "Mode '" << args[1] << "' does not exist\n";
 								}
 		break;
 
-		case State::GET:		if (session.ok ())
-									get (session, args[1].c_str (), mode);
-								else
-									std::cout << "no connection defined\n";
+		case State::GET:		if (s->ok ()) {
+									int bytes = get (*s, args[1].c_str (), modes[mode]);
+									std::cout << "Received" << bytes << " bytes\n";
+								}
+								else std::cout << "no connection defined\n";
 		break;
 
 
@@ -126,9 +134,8 @@ void interactive_prompt (udp::client& client)
 	}
 }
 
-void get (udp::session& session, const char* filename, Mode mode)
+int get (udp::session& session, const char* filename, Mode mode)
 {
-
 	using tftp::protocol;
 
 	assert (session.ok ());
@@ -137,10 +144,12 @@ void get (udp::session& session, const char* filename, Mode mode)
 	char buffer [512];
 
 	int  bytes = 0;
-	auto rrq   = protocol::get  (filename, mode);
-	int  len   = protocol::pack (buffer, &rrq);
+	int  size  = 0;
 
-	if    ((bytes = session.send (buffer, len)) == len)
+	auto rrq   = protocol::get  (filename, mode);
+	int  len   = protocol::pack (buffer  , &rrq);
+
+	if ((bytes = session.send (buffer, len)) == len)
 	while ((bytes = session.recv (buffer, sizeof (buffer))) > 0)
 	{
 		tftp::packet::data dta (buffer);
@@ -148,9 +157,14 @@ void get (udp::session& session, const char* filename, Mode mode)
 
 		session.send (buffer, protocol::pack (buffer, &ack));
 
+		size += bytes;
 		file << dta.text;
 		if (dta.last ())
 			break;
 	}
+
+
 	file.close ();
+
+	return size;
 }

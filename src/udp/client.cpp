@@ -2,7 +2,7 @@
 
 namespace udp {
 
-session client::connect (const char* host, const char* port) {
+session::pointer client::connect (const char* host, const char* port) {
 
 	int fd = -1;
 
@@ -20,7 +20,7 @@ session client::connect (const char* host, const char* port) {
 		fd = socket (res->ai_family, res->ai_socktype, res->ai_protocol);
 	}
 
-	return session (fd, res);
+	return session::pointer (new session (fd, res));
 }
 
 
