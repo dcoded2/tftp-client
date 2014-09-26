@@ -21,7 +21,7 @@ class request : public packet {
 		request (char* buf);
 
 		uint16_t pack (char* buf) const;
-		void     unpack (char* it);
+		bool     unpack (char* it);
 };
 
 

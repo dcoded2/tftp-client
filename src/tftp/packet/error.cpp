@@ -19,14 +19,17 @@ uint16_t error::pack (char* buf) const {
 	return (it - buf);
 }
 
-void error::unpack (char* it) {
+bool error::unpack (char* it) {
 
 	deserializer <uint16_t> (it, (uint16_t*)&this->opcode);
 
-	assert (opcode == Opcode::OP_ERR);
+	if (opcode != Opcode::OP_ERR)
+		return false;
 
 	deserializer <uint16_t>    (it, &err);
 	deserializer <std::string> (it, &message);
+
+	return true;
 }
 
 }}

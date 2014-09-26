@@ -23,6 +23,7 @@ class protocol {
 		static packet::request get   (const char* path, Mode mode = Mode::OCTET);
 		static packet::request put   (const char* path, Mode mode = Mode::OCTET);
 		static packet::ack     ack   (uint16_t id);
+		static packet::ack     ack   (packet::data& data);
 		static packet::error   error (uint16_t error, std::string message);
 
 

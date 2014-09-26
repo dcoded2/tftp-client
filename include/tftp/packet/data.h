@@ -20,9 +20,10 @@ class data : public packet {
 
 		data ();
 		data (char* buf);
+		//data (char* buf, uint16_t size);
 
 		uint16_t pack   (char* buf) const;
-		void     unpack (char* it);
+		bool     unpack (char* it);
 		bool     last () const;
 };   
 

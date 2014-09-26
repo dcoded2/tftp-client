@@ -9,8 +9,7 @@
 namespace tftp {
 namespace packet {
 
-template <typename T>
-struct serializer {
+template <typename T> struct serializer {
 
 	serializer (char*& buf, T data, int size = sizeof (T)) {
 		memcpy (buf, &data, size);
@@ -18,8 +17,7 @@ struct serializer {
 	}
 };
 
-template <>
-struct serializer <uint16_t> {
+template <> struct serializer <uint16_t> {
 	
 	serializer (char*& buf, uint16_t data) {
 		int size = 0;
@@ -32,8 +30,7 @@ struct serializer <uint16_t> {
 	}
 };
 
-template <>
-struct serializer <std::string> {
+template <> struct serializer <std::string> {
 
 	serializer (char*& buf, std::string data) {
 		int size = data.size () + 1;
@@ -44,8 +41,7 @@ struct serializer <std::string> {
 };
 
 
-template <typename T>
-struct deserializer {
+template <typename T> struct deserializer {
 
 	deserializer (char*& src, T* dst, int size = sizeof (T)) {
 		memcpy (dst, &src, size);
@@ -53,8 +49,7 @@ struct deserializer {
 	}
 };
 
-template <>
-struct deserializer <uint16_t> {
+template <> struct deserializer <uint16_t> {
 	
 	deserializer (char*& src, uint16_t* dst) {
 		*dst = ntohs (*(uint16_t*)src);
@@ -62,8 +57,7 @@ struct deserializer <uint16_t> {
 	}
 };
 
-template <>
-struct deserializer <std::string> {
+template <> struct deserializer <std::string> {
 
 	deserializer (char*& src, std::string* dst) {
 		dst->clear ();

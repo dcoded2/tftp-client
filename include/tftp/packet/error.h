@@ -21,7 +21,7 @@ class error : public packet {
 		error (char* buf);
 
 		uint16_t pack (char* buf) const;
-		void     unpack (char* it);
+		bool     unpack (char* it);
 };
 
 

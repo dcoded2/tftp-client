@@ -6,9 +6,9 @@
 namespace tftp {
 
 enum class Mode : uint8_t {
-	NET_ASCII = 0,
-	OCTET     = 1,
-	MAIL      = 2
+	NET_ASCII = 0x00,
+	OCTET     = 0x01,
+	MAIL      = 0x02
 };
 
 static const char* mode[] = {

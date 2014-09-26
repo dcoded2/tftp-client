@@ -18,19 +18,23 @@ class session {
 	public:
 		typedef std::shared_ptr<session> pointer;
 
-		session (int fd = -1, addrinfo* addr = nullptr);
+		session (int fd = -1, addrinfo* addr = nullptr, uint16_t seconds = 30);
 		~session ();
 
 		session& operator= (const session& rhs);
 
 		int send (char* buffer, uint16_t len);
-		int recv  (char* buffer, uint16_t len);
+		int recv (char* buffer, uint16_t len);
+
+		uint16_t timeout () const;
+		bool     timeout (uint16_t seconds);
 
 		bool ok ();
 
 	private:
 		int       fd_  = -1;
 		addrinfo* res_ = nullptr;
+		uint16_t  time_;
 };
 
 }

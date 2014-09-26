@@ -16,8 +16,16 @@
 namespace udp {
 
 class client {
+
+	private:
+		std::string host_;
+		std::string port_;
+
 	public:
-		session::pointer connect (const char* host, const char* port);
+		void connect (const char* host, const char* port);
+		session::pointer session ();
+
+		std::string address () const;
 };
 
 };

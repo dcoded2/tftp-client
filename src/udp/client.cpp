@@ -2,7 +2,17 @@
 
 namespace udp {
 
-session::pointer client::connect (const char* host, const char* port) {
+void client::connect (const char* host, const char* port) {
+
+	host_ = host;
+	port_ = port;
+}
+
+std::string client::address () const {
+	return host_;
+}
+
+session::pointer client::session () {
 
 	int fd = -1;
 
@@ -16,12 +26,11 @@ session::pointer client::connect (const char* host, const char* port) {
 	hints.ai_protocol = IPPROTO_UDP;
 
 	// get ready to connect
-	if (getaddrinfo (host, port, &hints, &res) == 0) {
+	if (getaddrinfo (host_.c_str (), port_.c_str (), &hints, &res) == 0) {
 		fd = socket (res->ai_family, res->ai_socktype, res->ai_protocol);
 	}
 
-	return session::pointer (new session (fd, res));
+	return udp::session::pointer (new udp::session (fd, res));
 }
-
 
 }

@@ -19,14 +19,17 @@ uint16_t request::pack (char* buf) const {
 	return (it - buf);
 }
 
-void request::unpack (char* it) {
+bool request::unpack (char* it) {
 
 	deserializer <uint16_t> (it, (uint16_t*)&this->opcode);
 
-	assert (opcode == Opcode::OP_WRQ || opcode == Opcode::OP_RRQ);
+	if (opcode != Opcode::OP_WRQ && opcode != Opcode::OP_RRQ)
+		return false;
 
 	deserializer <std::string> (it, &file);
 	deserializer <std::string> (it, &mode);
+
+	return true;
 }
 
 }}

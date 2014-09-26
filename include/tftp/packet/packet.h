@@ -24,7 +24,7 @@ class packet {
 
 	public:
 		virtual uint16_t pack   (char*) const = 0;
-		virtual void     unpack (char*)       = 0;
+		virtual bool     unpack (char*)       = 0;
 };
 
 

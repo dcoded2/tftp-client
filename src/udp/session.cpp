@@ -2,9 +2,12 @@
 
 namespace udp {
 
-session::session (int fd, addrinfo* addr)
-: fd_ (fd)
-, res_ (addr) {}
+session::session (int fd, addrinfo* addr, uint16_t seconds)
+: fd_   (fd)
+, res_  (addr)
+, time_ (seconds) {
+	timeout (seconds);
+}
 
 
 session::~session () {
@@ -41,6 +44,18 @@ int session::recv (char* buffer, uint16_t len) {
 
 bool session::ok () {
 	return (fd_ >= 0);
+}
+
+uint16_t session::timeout () const {
+	return time_;
+}
+
+bool session::timeout (uint16_t seconds) {
+	struct timeval tv;
+	tv.tv_sec  = seconds;
+	tv.tv_usec = 0;
+
+	return (setsockopt (fd_, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof (tv)) >= 0);
 }
 
 }

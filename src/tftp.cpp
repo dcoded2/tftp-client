@@ -28,6 +28,14 @@ packet::ack protocol::ack (uint16_t id) {
 	return packet;
 }
 
+packet::ack protocol::ack (packet::data& data) {
+
+	packet::ack packet;
+	packet.index = data.index;
+
+	return packet;
+}
+
 
 packet::error protocol::error (uint16_t error, std::string message) {
 	packet::error packet;

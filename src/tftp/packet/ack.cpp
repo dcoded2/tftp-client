@@ -18,13 +18,16 @@ uint16_t ack::pack (char* buf) const {
 	return (it - buf);
 }
 
-void ack::unpack (char* it) {
+bool ack::unpack (char* it) {
 
 	deserializer <uint16_t> (it, (uint16_t*)&this->opcode);
 
-	assert (opcode == Opcode::OP_ACK);
+	if (opcode != Opcode::OP_ACK)
+		return false;
 
 	deserializer <uint16_t> (it, &index);
+
+	return true;
 }
 
 }}
